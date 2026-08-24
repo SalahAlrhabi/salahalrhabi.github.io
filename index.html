@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Salah Alrhabi — Data Analyst Portfolio. Power BI, SQL, Python, Excel and Data Visualization.">
+
+    <meta name="author" content="Salah Alrhabi">
+
+    <title>Salah Alrhabi | Data Analyst</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --bg: #07111f;
+            --bg-secondary: #0c1728;
+            --card: rgba(17, 30, 50, 0.72);
+            --card-solid: #101d30;
+            --text: #f4f7fb;
+            --muted: #9aa9bd;
+            --primary: #5eead4;
+            --primary-dark: #2dd4bf;
+            --secondary: #60a5fa;
+            --border: rgba(255,255,255,0.09);
+            --shadow: 0 25px 70px rgba(0,0,0,0.35);
+        }
+
+        body {
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system,
+                         BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background:
+                radial-gradient(circle at 15% 10%, rgba(94,234,212,0.10), transparent 28%),
+                radial-gradient(circle at 85% 20%, rgba(96,165,250,0.12), transparent 28%),
+                var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1120px, 92%);
+            margin: auto;
+        }
+
+        /* =========================
+           NAVBAR
+        ========================== */
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            backdrop-filter: blur(18px);
+            background: rgba(7,17,31,0.72);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-inner {
+            height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--muted);
+            font-size: 0.92rem;
+            transition: 0.25s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 120px 0 80px;
+            position: relative;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 7px 13px;
+            border: 1px solid rgba(94,234,212,0.2);
+            background: rgba(94,234,212,0.06);
+            border-radius: 999px;
+            color: var(--primary);
+            font-size: 0.82rem;
+            font-weight: 600;
+            margin-bottom: 22px;
+        }
+
+        .dot {
+            width: 7px;
+            height: 7px;
+            background: var(--primary);
+            border-radius: 50%;
+            box-shadow: 0 0 14px var(--primary);
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 7vw, 5.6rem);
+            line-height: 0.98;
+            letter-spacing: -4px;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(
+                100deg,
+                var(--primary),
+                var(--secondary)
+            );
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero-subtitle {
+            font-size: 1.45rem;
+            color: #d7e1ee;
+            font-weight: 600;
+            margin-bottom: 17px;
+        }
+
+        .hero-description {
+            max-width: 650px;
+            color: var(--muted);
+            font-size: 1.05rem;
+            margin-bottom: 32px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 0.92rem;
+            border: 1px solid var(--border);
+            transition: 0.25s ease;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: #06131c;
+            border-color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            background: #8ff5e5;
+        }
+
+        .btn-outline {
+            background: rgba(255,255,255,0.03);
+            color: var(--text);
+        }
+
+        .btn-outline:hover {
+            transform: translateY(-2px);
+            border-color: rgba(94,234,212,0.4);
+        }
+
+        /* =========================
+           HERO CARD
+        ========================== */
+
+        .hero-card {
+            position: relative;
+        }
+
+        .profile-card {
+            padding: 28px;
+            border-radius: 26px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            backdrop-filter: blur(20px);
+            box-shadow: var(--shadow);
+        }
+
+        .profile-top {
+            display: flex;
+            align-items: center;
+            gap: 17px;
+            margin-bottom: 25px;
+        }
+
+        .avatar {
+            width: 62px;
+            height: 62px;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: #06131c;
+            background: linear-gradient(
+                135deg,
+                var(--primary),
+                var(--secondary)
+            );
+        }
+
+        .profile-top h3 {
+            font-size: 1.15rem;
+        }
+
+        .profile-top p {
+            color: var(--muted);
+            font-size: 0.86rem;
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .stat {
+            padding: 18px;
+            border-radius: 16px;
+            background: rgba(255,255,255,0.035);
+            border: 1px solid var(--border);
+        }
+
+        .stat strong {
+            display: block;
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: 3px;
+        }
+
+        .stat span {
+            color: var(--muted);
+            font-size: 0.78rem;
+        }
+
+        /* =========================
+           SECTIONS
+        ========================== */
+
+        section {
+            padding: 110px 0;
+        }
+
+        .section-heading {
+            max-width: 720px;
+            margin-bottom: 45px;
+        }
+
+        .section-label {
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .section-heading h2 {
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            letter-spacing: -1.5px;
+            margin-bottom: 13px;
+        }
+
+        .section-heading p {
+            color: var(--muted);
+        }
+
+        /* =========================
+           ABOUT
+        ========================== */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 22px;
+            padding: 30px;
+            backdrop-filter: blur(18px);
+        }
+
+        .card p {
+            color: var(--muted);
+        }
+
+        .about-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .about-list li {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 14px;
+            color: #d6e0ed;
+        }
+
+        .about-list li::before {
+            content: "✓";
+            color: var(--primary);
+            font-weight: 800;
+        }
+
+        /* =========================
+           SKILLS
+        ========================== */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .skill {
+            padding: 22px;
+            border-radius: 17px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            transition: 0.25s ease;
+        }
+
+        .skill:hover {
+            transform: translateY(-4px);
+            border-color: rgba(94,234,212,0.3);
+        }
+
+        .skill strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .skill span {
+            color: var(--muted);
+            font-size: 0.82rem;
+        }
+
+        /* =========================
+           PROJECT
+        ========================== */
+
+        .project {
+            overflow: hidden;
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(94,234,212,0.06),
+                    rgba(96,165,250,0.05)
+                ),
+                var(--card);
+            border: 1px solid var(--border);
+            border-radius: 28px;
+            box-shadow: var(--shadow);
+        }
+
+        .project-image {
+            min-height: 390px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: #0a1423;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            min-height: 390px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .project:hover .project-image img {
+            transform: scale(1.025);
+        }
+
+        .image-placeholder {
+            text-align: center;
+            padding: 50px;
+            color: var(--muted);
+        }
+
+        .image-placeholder strong {
+            display: block;
+            color: var(--primary);
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .project-content {
+            padding: 35px;
+        }
+
+        .project-content h3 {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+
+        .project-content > p {
+            color: var(--muted);
+            max-width: 800px;
+            margin-bottom: 24px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+            margin-bottom: 28px;
+        }
+
+        .tag {
+            padding: 6px 11px;
+            border-radius: 999px;
+            background: rgba(94,234,212,0.07);
+            border: 1px solid rgba(94,234,212,0.15);
+            color: #baf7ef;
+            font-size: 0.78rem;
+        }
+
+        /* =========================
+           INSIGHTS
+        ========================== */
+
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 17px;
+        }
+
+        .insight {
+            padding: 25px;
+            border-radius: 20px;
+            background: var(--card);
+            border: 1px solid var(--border);
+        }
+
+        .insight-number {
+            font-size: 2rem;
+            font-weight: 850;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .insight h3 {
+            margin-bottom: 7px;
+        }
+
+        .insight p {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        /* =========================
+           CONTACT
+        ========================== */
+
+        .contact {
+            text-align: center;
+            padding-bottom: 120px;
+        }
+
+        .contact-box {
+            max-width: 800px;
+            margin: auto;
+            padding: 50px 30px;
+            border-radius: 28px;
+            background:
+                radial-gradient(
+                    circle at top,
+                    rgba(94,234,212,0.10),
+                    transparent 60%
+                ),
+                var(--card);
+            border: 1px solid var(--border);
+        }
+
+        .contact-box h2 {
+            font-size: clamp(2rem, 5vw, 3.3rem);
+            margin-bottom: 13px;
+        }
+
+        .contact-box p {
+            color: var(--muted);
+            margin-bottom: 28px;
+        }
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 28px 0;
+            color: var(--muted);
+            font-size: 0.82rem;
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* =========================
+           REVEAL ANIMATION
+        ========================== */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(22px);
+            transition: 0.7s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media (max-width: 900px) {
+
+            .hero-grid,
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .insights-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .hero-card {
+                max-width: 600px;
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding-top: 120px;
+            }
+
+            .hero h1 {
+                letter-spacing: -2px;
+            }
+
+            .skills-grid,
+            .insights-grid,
+            .stat-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-content {
+                padding: 25px;
+            }
+
+            .project-content h3 {
+                font-size: 1.6rem;
+            }
+
+            .project-image,
+            .project-image img {
+                min-height: 230px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <nav>
+        <div class="container nav-inner">
+
+            <a href="#home" class="logo">
+                Salah<span>.</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#insights">Insights</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <header class="hero" id="home">
+
+        <div class="container hero-grid">
+
+            <div class="reveal">
+
+                <div class="eyebrow">
+                    <span class="dot"></span>
+                    Open to Data Analyst Opportunities
+                </div>
+
+                <h1>
+                    Hi, I'm<br>
+                    <span>Salah Alrhabi.</span>
+                </h1>
+
+                <div class="hero-subtitle">
+                    Data Analyst
+                </div>
+
+                <p class="hero-description">
+                    I transform data into meaningful insights, interactive
+                    dashboards, and clear visualizations that help businesses
+                    understand performance and make better decisions.
+                </p>
+
+                <div class="buttons">
+
+                    <a href="#projects" class="btn btn-primary">
+                        View My Project
+                    </a>
+
+                    <a
+                        href="https://github.com/SalahAlrhabi"
+                        target="_blank"
+                        class="btn btn-outline">
+                        GitHub ↗
+                    </a>
+
+                    <a
+                        href="https://www.linkedin.com/"
+                        target="_blank"
+                        class="btn btn-outline">
+                        LinkedIn ↗
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-card reveal">
+
+                <div class="profile-card">
+
+                    <div class="profile-top">
+
+                        <div class="avatar">
+                            SA
+                        </div>
+
+                        <div>
+                            <h3>Salah Alrhabi</h3>
+                            <p>Data Analyst · Power BI</p>
+                        </div>
+
+                    </div>
+
+                    <div class="stat-grid">
+
+                        <div class="stat">
+                            <strong>Power BI</strong>
+                            <span>Business Intelligence</span>
+                        </div>
+
+                        <div class="stat">
+                            <strong>SQL</strong>
+                            <span>Data Analysis</span>
+                        </div>
+
+                        <div class="stat">
+                            <strong>Python</strong>
+                            <span>Analytics</span>
+                        </div>
+
+                        <div class="stat">
+                            <strong>Excel</strong>
+                            <span>Data Preparation</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section id="about">
+
+        <div class="container">
+
+            <div class="section-heading reveal">
+
+                <div class="section-label">
+                    About Me
+                </div>
+
+                <h2>
+                    Turning data into decisions.
+                </h2>
+
+                <p>
+                    I am an Information Technology graduate focused on building
+                    my career as a Data Analyst.
+                </p>
+
+            </div>
+
+
+            <div class="about-grid">
+
+                <div class="card reveal">
+
+                    <p>
+                        I have hands-on experience working with Microsoft
+                        Power BI, SQL, Python, and Excel. I enjoy transforming
+                        raw data into meaningful insights, interactive
+                        dashboards, and clear visualizations that support
+                        better business decision-making.
+                    </p>
+
+                    <ul class="about-list">
+
+                        <li>
+                            Data cleaning and transformation
+                        </li>
+
+                        <li>
+                            Data analysis and advanced SQL
+                        </li>
+
+                        <li>
+                            Star Schema data modeling
+                        </li>
+
+                        <li>
+                            DAX and time-intelligence calculations
+                        </li>
+
+                        <li>
+                            Interactive dashboard development
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="card reveal">
+
+                    <p>
+                        I am continuously developing my skills through
+                        practical projects focused on data analysis,
+                        statistics, business intelligence, and data
+                        visualization.
+                    </p>
+
+                    <br>
+
+                    <p>
+                        My goal is to contribute to data-driven organizations
+                        by turning complex datasets into clear business
+                        insights and actionable recommendations.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SKILLS
+    ========================== -->
+
+    <section id="skills">
+
+        <div class="container">
+
+            <div class="section-heading reveal">
+
+                <div class="section-label">
+                    Skills
+                </div>
+
+                <h2>
+                    My analytical toolkit.
+                </h2>
+
+                <p>
+                    Technologies and analytical skills I use to transform
+                    data into useful business information.
+                </p>
+
+            </div>
+
+
+            <div class="skills-grid">
+
+                <div class="skill reveal">
+                    <strong>Microsoft Power BI</strong>
+                    <span>Dashboards & BI</span>
+                </div>
+
+                <div class="skill reveal">
+                    <strong>SQL</strong>
+                    <span>Data Analysis & Queries</span>
+                </div>
+
+                <div class="skill reveal">
+                    <strong>Python</strong>
+                    <span>Data Analytics</span>
+                </div>
+
+                <div class="skill reveal">
+                    <strong>Microsoft Excel</strong>
+                    <span>Data Preparation</span>
+                </div>
+
+                <div class="skill reveal">
+                    <strong>DAX</strong>
+                    <span>Measures & KPIs</span>
+                </div>
+
+                <div class="skill reveal">
+                    <strong>Power Query</strong>
+                    <span>Data Transformation</span>
+                </div>
+
+                <div class="skill reveal">
+                    <strong>Data Modeling</strong>
+                    <span>Star Schema</span>
+                </div>
+
+                <div class="skill reveal">
+                    <strong>Data Visualization</strong>
+                    <span>Business Insights</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROJECT
+    ========================== -->
+
+    <section id="projects">
+
+        <div class="container">
+
+            <div class="section-heading reveal">
+
+                <div class="section-label">
+                    Featured Project
+                </div>
+
+                <h2>
+                    Superstore Sales & Profitability Analysis
+                </h2>
+
+                <p>
+                    An end-to-end Power BI business intelligence project
+                    focused on sales, profitability, customers, products,
+                    discounts, and geographic performance.
+                </p>
+
+            </div>
+
+
+            <div class="project reveal">
+
+                <div class="project-image">
+
+                    <img
+                        src="Screenshots/01-Executive-Dashboard.png"
+                        alt="Superstore Sales and Profitability Executive Dashboard"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+
+                    <div class="image-placeholder" style="display:none;">
+                        <strong>Executive Dashboard</strong>
+                        <span>
+                            Add your final dashboard screenshot to the
+                            Screenshots folder.
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <h3>
+                        Superstore Sales & Profitability Analysis
+                    </h3>
+
+                    <p>
+                        Built an interactive Power BI solution to analyze
+                        sales performance, profitability, product and
+                        category performance, customer segments, regional
+                        performance, and the impact of discounts on profit.
+                    </p>
+
+
+                    <div class="tags">
+
+                        <span class="tag">Power BI</span>
+                        <span class="tag">DAX</span>
+                        <span class="tag">Power Query</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">Excel</span>
+                        <span class="tag">Data Modeling</span>
+                        <span class="tag">Data Visualization</span>
+
+                    </div>
+
+
+                    <div class="buttons">
+
+                        <a
+                            href="https://github.com/SalahAlrhabi/superstore-sales-profitability-analysis"
+                            target="_blank"
+                            class="btn btn-primary">
+                            View GitHub
+                        </a>
+
+                        <a
+                            href="Documentation/Project_Documentation_Superstore_Sales_Profitability.pdf"
+                            target="_blank"
+                            class="btn btn-outline">
+                            Project Documentation
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         INSIGHTS
+    ========================== -->
+
+    <section id="insights">
+
+        <div class="container">
+
+            <div class="section-heading reveal">
+
+                <div class="section-label">
+                    Business Insights
+                </div>
+
+                <h2>
+                    What the analysis revealed.
+                </h2>
+
+                <p>
+                    Selected findings from the Superstore analysis.
+                </p>
+
+            </div>
+
+
+            <div class="insights-grid">
+
+                <div class="insight reveal">
+
+                    <div class="insight-number">
+                        +46.88%
+                    </div>
+
+                    <h3>
+                        Sales Growth
+                    </h3>
+
+                    <p>
+                        Sales increased by approximately 46.88% year over
+                        year during the analyzed period.
+                    </p>
+
+                </div>
+
+
+                <div class="insight reveal">
+
+                    <div class="insight-number">
+                        $145K
+                    </div>
+
+                    <h3>
+                        Technology Profit
+                    </h3>
+
+                    <p>
+                        Technology generated approximately $836K in sales
+                        and $145K in profit.
+                    </p>
+
+                </div>
+
+
+                <div class="insight reveal">
+
+                    <div class="insight-number">
+                        2.49%
+                    </div>
+
+                    <h3>
+                        Furniture Margin
+                    </h3>
+
+                    <p>
+                        Furniture generated high sales but relatively weak
+                        profitability.
+                    </p>
+
+                </div>
+
+
+                <div class="insight reveal">
+
+                    <div class="insight-number">
+                        -$17.7K
+                    </div>
+
+                    <h3>
+                        Tables Loss
+                    </h3>
+
+                    <p>
+                        Tables generated approximately $207K in sales but
+                        produced a negative profit.
+                    </p>
+
+                </div>
+
+
+                <div class="insight reveal">
+
+                    <div class="insight-number">
+                        7.92%
+                    </div>
+
+                    <h3>
+                        Central Margin
+                    </h3>
+
+                    <p>
+                        Central showed comparatively low profitability despite
+                        generating significant sales.
+                    </p>
+
+                </div>
+
+
+                <div class="insight reveal">
+
+                    <div class="insight-number">
+                        West
+                    </div>
+
+                    <h3>
+                        Strong Region
+                    </h3>
+
+                    <p>
+                        The West region demonstrated strong overall
+                        performance in the analysis.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section id="contact" class="contact">
+
+        <div class="container">
+
+            <div class="contact-box reveal">
+
+                <div class="section-label">
+                    Contact
+                </div>
+
+                <h2>
+                    Let's connect.
+                </h2>
+
+                <p>
+                    I am currently seeking opportunities as a Data Analyst
+                    and would be happy to connect with recruiters,
+                    professionals, and organizations.
+                </p>
+
+                <div class="buttons" style="justify-content:center;">
+
+                    <a
+                        href="mailto:YOUR_EMAIL@example.com"
+                        class="btn btn-primary">
+                        Email Me
+                    </a>
+
+                    <a
+                        href="https://www.linkedin.com/"
+                        target="_blank"
+                        class="btn btn-outline">
+                        LinkedIn
+                    </a>
+
+                    <a
+                        href="https://github.com/SalahAlrhabi"
+                        target="_blank"
+                        class="btn btn-outline">
+                        GitHub
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="container footer-inner">
+
+            <span>
+                © 2026 Salah Alrhabi
+            </span>
+
+            <span>
+                Data Analyst Portfolio
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+
+                entries.forEach(entry => {
+
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.12
+            }
+        );
+
+
+        document
+            .querySelectorAll(".reveal")
+            .forEach(element => observer.observe(element));
+
+    </script>
+
+</body>
+</html>
