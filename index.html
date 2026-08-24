@@ -2,16 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-          content="Salah Alrhabi — Data Analyst Portfolio. Power BI, SQL, Python, Excel and Data Visualization.">
+    <meta
+        name="description"
+        content="Salah Alrhabi — Data Analyst Portfolio. Power BI, SQL, Python, Excel and Data Visualization."
+    >
+
+    <meta
+        name="keywords"
+        content="Data Analyst, Power BI, SQL, Python, Excel, DAX, Power Query, Data Visualization"
+    >
 
     <meta name="author" content="Salah Alrhabi">
 
     <title>Salah Alrhabi | Data Analyst</title>
 
     <style>
+
+        /* =========================================================
+           RESET
+        ========================================================= */
+
         * {
             margin: 0;
             padding: 0;
@@ -24,628 +37,1269 @@
             --bg-secondary: #0c1728;
             --card: rgba(17, 30, 50, 0.72);
             --card-solid: #101d30;
+
             --text: #f4f7fb;
+            --text-secondary: #d6e0ed;
             --muted: #9aa9bd;
+
             --primary: #5eead4;
-            --primary-dark: #2dd4bf;
+            --primary-light: #99f6e4;
             --secondary: #60a5fa;
-            --border: rgba(255,255,255,0.09);
-            --shadow: 0 25px 70px rgba(0,0,0,0.35);
+
+            --border: rgba(255, 255, 255, 0.09);
+
+            --shadow:
+                0 25px 70px rgba(0, 0, 0, 0.35);
+
+            --radius: 22px;
         }
 
+
+        /* =========================================================
+           BODY
+        ========================================================= */
+
         body {
-            font-family: Inter, ui-sans-serif, system-ui, -apple-system,
-                         BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+            font-family:
+                Inter,
+                ui-sans-serif,
+                system-ui,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                sans-serif;
+
             background:
-                radial-gradient(circle at 15% 10%, rgba(94,234,212,0.10), transparent 28%),
-                radial-gradient(circle at 85% 20%, rgba(96,165,250,0.12), transparent 28%),
+
+                radial-gradient(
+                    circle at 15% 10%,
+                    rgba(94, 234, 212, 0.10),
+                    transparent 28%
+                ),
+
+                radial-gradient(
+                    circle at 85% 20%,
+                    rgba(96, 165, 250, 0.12),
+                    transparent 28%
+                ),
+
                 var(--bg);
+
             color: var(--text);
+
             line-height: 1.7;
+
             overflow-x: hidden;
         }
+
 
         a {
             color: inherit;
             text-decoration: none;
         }
 
+
+        img {
+            max-width: 100%;
+        }
+
+
         .container {
+
             width: min(1120px, 92%);
+
             margin: auto;
         }
 
-        /* =========================
+
+        /* =========================================================
            NAVBAR
-        ========================== */
+        ========================================================= */
 
         nav {
+
             position: fixed;
+
             top: 0;
             left: 0;
+
             width: 100%;
+
             z-index: 1000;
+
             backdrop-filter: blur(18px);
-            background: rgba(7,17,31,0.72);
-            border-bottom: 1px solid var(--border);
+
+            background: rgba(7, 17, 31, 0.78);
+
+            border-bottom:
+                1px solid var(--border);
         }
 
+
         .nav-inner {
+
             height: 76px;
+
             display: flex;
+
             align-items: center;
+
             justify-content: space-between;
         }
 
+
         .logo {
+
             font-size: 1.2rem;
+
             font-weight: 800;
+
             letter-spacing: -0.5px;
         }
 
+
         .logo span {
+
             color: var(--primary);
         }
 
+
         .nav-links {
+
             display: flex;
+
             gap: 28px;
+
             list-style: none;
         }
 
+
         .nav-links a {
+
             color: var(--muted);
+
             font-size: 0.92rem;
+
             transition: 0.25s ease;
         }
 
+
         .nav-links a:hover {
+
             color: var(--primary);
         }
 
-        /* =========================
+
+        /* =========================================================
            HERO
-        ========================== */
+        ========================================================= */
 
         .hero {
+
             min-height: 100vh;
+
             display: flex;
+
             align-items: center;
-            padding: 120px 0 80px;
+
+            padding: 130px 0 90px;
+
             position: relative;
         }
 
+
         .hero-grid {
+
             display: grid;
-            grid-template-columns: 1.15fr 0.85fr;
+
+            grid-template-columns:
+                1.15fr
+                0.85fr;
+
             gap: 70px;
+
             align-items: center;
         }
 
+
         .eyebrow {
+
             display: inline-flex;
+
             align-items: center;
+
             gap: 9px;
+
             padding: 7px 13px;
-            border: 1px solid rgba(94,234,212,0.2);
-            background: rgba(94,234,212,0.06);
+
+            border:
+                1px solid
+                rgba(94, 234, 212, 0.2);
+
+            background:
+                rgba(94, 234, 212, 0.06);
+
             border-radius: 999px;
+
             color: var(--primary);
+
             font-size: 0.82rem;
+
             font-weight: 600;
+
             margin-bottom: 22px;
         }
 
+
         .dot {
+
             width: 7px;
             height: 7px;
+
             background: var(--primary);
+
             border-radius: 50%;
-            box-shadow: 0 0 14px var(--primary);
+
+            box-shadow:
+                0 0 14px var(--primary);
         }
 
+
         .hero h1 {
-            font-size: clamp(3rem, 7vw, 5.6rem);
+
+            font-size:
+                clamp(3rem, 7vw, 5.6rem);
+
             line-height: 0.98;
+
             letter-spacing: -4px;
+
             margin-bottom: 25px;
         }
 
+
         .hero h1 span {
-            background: linear-gradient(
-                100deg,
-                var(--primary),
-                var(--secondary)
-            );
+
+            background:
+                linear-gradient(
+                    100deg,
+                    var(--primary),
+                    var(--secondary)
+                );
+
             -webkit-background-clip: text;
+
             background-clip: text;
+
             color: transparent;
         }
 
+
         .hero-subtitle {
+
             font-size: 1.45rem;
-            color: #d7e1ee;
+
+            color: var(--text-secondary);
+
             font-weight: 600;
+
             margin-bottom: 17px;
         }
 
+
         .hero-description {
+
             max-width: 650px;
+
             color: var(--muted);
+
             font-size: 1.05rem;
+
             margin-bottom: 32px;
         }
 
+
+        /* =========================================================
+           BUTTONS
+        ========================================================= */
+
         .buttons {
+
             display: flex;
+
             gap: 14px;
+
             flex-wrap: wrap;
         }
 
+
         .btn {
+
             display: inline-flex;
+
             align-items: center;
+
             justify-content: center;
+
             padding: 12px 20px;
+
             border-radius: 12px;
+
             font-weight: 700;
+
             font-size: 0.92rem;
-            border: 1px solid var(--border);
-            transition: 0.25s ease;
+
+            border:
+                1px solid
+                var(--border);
+
+            transition:
+                transform 0.25s ease,
+                border-color 0.25s ease,
+                background 0.25s ease;
         }
 
+
         .btn-primary {
+
             background: var(--primary);
+
             color: #06131c;
+
             border-color: var(--primary);
         }
 
+
         .btn-primary:hover {
-            transform: translateY(-2px);
-            background: #8ff5e5;
+
+            transform: translateY(-3px);
+
+            background: var(--primary-light);
         }
 
+
         .btn-outline {
-            background: rgba(255,255,255,0.03);
+
+            background:
+                rgba(255, 255, 255, 0.03);
+
             color: var(--text);
         }
 
+
         .btn-outline:hover {
-            transform: translateY(-2px);
-            border-color: rgba(94,234,212,0.4);
+
+            transform: translateY(-3px);
+
+            border-color:
+                rgba(94, 234, 212, 0.4);
         }
 
-        /* =========================
-           HERO CARD
-        ========================== */
 
-        .hero-card {
-            position: relative;
-        }
+        /* =========================================================
+           HERO PROFILE CARD
+        ========================================================= */
 
         .profile-card {
+
             padding: 28px;
+
             border-radius: 26px;
+
             background: var(--card);
-            border: 1px solid var(--border);
+
+            border:
+                1px solid
+                var(--border);
+
             backdrop-filter: blur(20px);
+
             box-shadow: var(--shadow);
         }
 
+
         .profile-top {
+
             display: flex;
+
             align-items: center;
+
             gap: 17px;
+
             margin-bottom: 25px;
         }
 
+
         .avatar {
+
             width: 62px;
             height: 62px;
+
             border-radius: 18px;
+
             display: flex;
+
             align-items: center;
+
             justify-content: center;
+
             font-size: 1.4rem;
+
             font-weight: 800;
+
             color: #06131c;
-            background: linear-gradient(
-                135deg,
-                var(--primary),
-                var(--secondary)
-            );
-        }
 
-        .profile-top h3 {
-            font-size: 1.15rem;
-        }
-
-        .profile-top p {
-            color: var(--muted);
-            font-size: 0.86rem;
-        }
-
-        .stat-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-        }
-
-        .stat {
-            padding: 18px;
-            border-radius: 16px;
-            background: rgba(255,255,255,0.035);
-            border: 1px solid var(--border);
-        }
-
-        .stat strong {
-            display: block;
-            color: var(--primary);
-            font-size: 1.2rem;
-            margin-bottom: 3px;
-        }
-
-        .stat span {
-            color: var(--muted);
-            font-size: 0.78rem;
-        }
-
-        /* =========================
-           SECTIONS
-        ========================== */
-
-        section {
-            padding: 110px 0;
-        }
-
-        .section-heading {
-            max-width: 720px;
-            margin-bottom: 45px;
-        }
-
-        .section-label {
-            color: var(--primary);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 0.75rem;
-            font-weight: 800;
-            margin-bottom: 10px;
-        }
-
-        .section-heading h2 {
-            font-size: clamp(2rem, 4vw, 3.2rem);
-            letter-spacing: -1.5px;
-            margin-bottom: 13px;
-        }
-
-        .section-heading p {
-            color: var(--muted);
-        }
-
-        /* =========================
-           ABOUT
-        ========================== */
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 25px;
-        }
-
-        .card {
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 22px;
-            padding: 30px;
-            backdrop-filter: blur(18px);
-        }
-
-        .card p {
-            color: var(--muted);
-        }
-
-        .about-list {
-            list-style: none;
-            margin-top: 20px;
-        }
-
-        .about-list li {
-            display: flex;
-            gap: 12px;
-            margin-bottom: 14px;
-            color: #d6e0ed;
-        }
-
-        .about-list li::before {
-            content: "✓";
-            color: var(--primary);
-            font-weight: 800;
-        }
-
-        /* =========================
-           SKILLS
-        ========================== */
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 15px;
-        }
-
-        .skill {
-            padding: 22px;
-            border-radius: 17px;
-            background: var(--card);
-            border: 1px solid var(--border);
-            transition: 0.25s ease;
-        }
-
-        .skill:hover {
-            transform: translateY(-4px);
-            border-color: rgba(94,234,212,0.3);
-        }
-
-        .skill strong {
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        .skill span {
-            color: var(--muted);
-            font-size: 0.82rem;
-        }
-
-        /* =========================
-           PROJECT
-        ========================== */
-
-        .project {
-            overflow: hidden;
             background:
                 linear-gradient(
                     135deg,
-                    rgba(94,234,212,0.06),
-                    rgba(96,165,250,0.05)
-                ),
-                var(--card);
-            border: 1px solid var(--border);
-            border-radius: 28px;
-            box-shadow: var(--shadow);
+                    var(--primary),
+                    var(--secondary)
+                );
         }
 
-        .project-image {
-            min-height: 390px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            background: #0a1423;
-            border-bottom: 1px solid var(--border);
+
+        .profile-top h3 {
+
+            font-size: 1.15rem;
         }
 
-        .project-image img {
-            width: 100%;
-            height: 100%;
-            min-height: 390px;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
 
-        .project:hover .project-image img {
-            transform: scale(1.025);
-        }
+        .profile-top p {
 
-        .image-placeholder {
-            text-align: center;
-            padding: 50px;
             color: var(--muted);
+
+            font-size: 0.86rem;
         }
 
-        .image-placeholder strong {
+
+        .stat-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 12px;
+        }
+
+
+        .stat {
+
+            padding: 18px;
+
+            border-radius: 16px;
+
+            background:
+                rgba(255, 255, 255, 0.035);
+
+            border:
+                1px solid
+                var(--border);
+        }
+
+
+        .stat strong {
+
             display: block;
+
             color: var(--primary);
-            font-size: 1.1rem;
-            margin-bottom: 8px;
+
+            font-size: 1.15rem;
+
+            margin-bottom: 3px;
         }
 
-        .project-content {
-            padding: 35px;
-        }
 
-        .project-content h3 {
-            font-size: 2rem;
-            margin-bottom: 12px;
-        }
+        .stat span {
 
-        .project-content > p {
             color: var(--muted);
-            max-width: 800px;
-            margin-bottom: 24px;
-        }
 
-        .tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 9px;
-            margin-bottom: 28px;
-        }
-
-        .tag {
-            padding: 6px 11px;
-            border-radius: 999px;
-            background: rgba(94,234,212,0.07);
-            border: 1px solid rgba(94,234,212,0.15);
-            color: #baf7ef;
             font-size: 0.78rem;
         }
 
-        /* =========================
-           INSIGHTS
-        ========================== */
 
-        .insights-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 17px;
+        /* =========================================================
+           SECTIONS
+        ========================================================= */
+
+        section {
+
+            padding: 110px 0;
         }
 
-        .insight {
-            padding: 25px;
-            border-radius: 20px;
-            background: var(--card);
-            border: 1px solid var(--border);
+
+        .section-heading {
+
+            max-width: 720px;
+
+            margin-bottom: 45px;
         }
 
-        .insight-number {
-            font-size: 2rem;
-            font-weight: 850;
+
+        .section-label {
+
             color: var(--primary);
-            margin-bottom: 8px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 2px;
+
+            font-size: 0.75rem;
+
+            font-weight: 800;
+
+            margin-bottom: 10px;
         }
 
-        .insight h3 {
-            margin-bottom: 7px;
-        }
 
-        .insight p {
-            color: var(--muted);
-            font-size: 0.9rem;
-        }
+        .section-heading h2 {
 
-        /* =========================
-           CONTACT
-        ========================== */
+            font-size:
+                clamp(2rem, 4vw, 3.2rem);
 
-        .contact {
-            text-align: center;
-            padding-bottom: 120px;
-        }
+            letter-spacing: -1.5px;
 
-        .contact-box {
-            max-width: 800px;
-            margin: auto;
-            padding: 50px 30px;
-            border-radius: 28px;
-            background:
-                radial-gradient(
-                    circle at top,
-                    rgba(94,234,212,0.10),
-                    transparent 60%
-                ),
-                var(--card);
-            border: 1px solid var(--border);
-        }
-
-        .contact-box h2 {
-            font-size: clamp(2rem, 5vw, 3.3rem);
             margin-bottom: 13px;
         }
 
-        .contact-box p {
+
+        .section-heading p {
+
             color: var(--muted);
-            margin-bottom: 28px;
         }
 
-        /* =========================
-           FOOTER
-        ========================== */
 
-        footer {
-            border-top: 1px solid var(--border);
-            padding: 28px 0;
+        /* =========================================================
+           CARDS
+        ========================================================= */
+
+        .card {
+
+            background: var(--card);
+
+            border:
+                1px solid
+                var(--border);
+
+            border-radius: var(--radius);
+
+            padding: 30px;
+
+            backdrop-filter: blur(18px);
+        }
+
+
+        .card p {
+
             color: var(--muted);
+        }
+
+
+        /* =========================================================
+           ABOUT
+        ========================================================= */
+
+        .about-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 25px;
+        }
+
+
+        .about-list {
+
+            list-style: none;
+
+            margin-top: 20px;
+        }
+
+
+        .about-list li {
+
+            display: flex;
+
+            gap: 12px;
+
+            margin-bottom: 14px;
+
+            color: var(--text-secondary);
+        }
+
+
+        .about-list li::before {
+
+            content: "✓";
+
+            color: var(--primary);
+
+            font-weight: 800;
+        }
+
+
+        /* =========================================================
+           SKILLS
+        ========================================================= */
+
+        .skills-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 15px;
+        }
+
+
+        .skill {
+
+            padding: 22px;
+
+            border-radius: 17px;
+
+            background: var(--card);
+
+            border:
+                1px solid
+                var(--border);
+
+            transition: 0.25s ease;
+        }
+
+
+        .skill:hover {
+
+            transform: translateY(-4px);
+
+            border-color:
+                rgba(94, 234, 212, 0.3);
+        }
+
+
+        .skill strong {
+
+            display: block;
+
+            margin-bottom: 5px;
+        }
+
+
+        .skill span {
+
+            color: var(--muted);
+
             font-size: 0.82rem;
         }
 
-        .footer-inner {
+
+        /* =========================================================
+           PROJECT
+        ========================================================= */
+
+        .project {
+
+            overflow: hidden;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    rgba(94, 234, 212, 0.06),
+                    rgba(96, 165, 250, 0.05)
+                ),
+
+                var(--card);
+
+            border:
+                1px solid
+                var(--border);
+
+            border-radius: 28px;
+
+            box-shadow: var(--shadow);
+        }
+
+
+        .project-image {
+
+            min-height: 390px;
+
             display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            overflow: hidden;
+
+            background: #0a1423;
+
+            border-bottom:
+                1px solid
+                var(--border);
+        }
+
+
+        .project-image img {
+
+            width: 100%;
+
+            height: 100%;
+
+            min-height: 390px;
+
+            object-fit: cover;
+        }
+
+
+        .project-content {
+
+            padding: 35px;
+        }
+
+
+        .project-content h3 {
+
+            font-size: 2rem;
+
+            margin-bottom: 12px;
+        }
+
+
+        .project-content > p {
+
+            color: var(--muted);
+
+            max-width: 850px;
+
+            margin-bottom: 24px;
+        }
+
+
+        /* =========================================================
+           TAGS
+        ========================================================= */
+
+        .tags {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 9px;
+
+            margin-bottom: 28px;
+        }
+
+
+        .tag {
+
+            padding: 6px 11px;
+
+            border-radius: 999px;
+
+            background:
+                rgba(94, 234, 212, 0.07);
+
+            border:
+                1px solid
+                rgba(94, 234, 212, 0.15);
+
+            color: #baf7ef;
+
+            font-size: 0.78rem;
+        }
+
+
+        /* =========================================================
+           DASHBOARD GALLERY
+        ========================================================= */
+
+        .gallery-section {
+
+            padding: 0 30px 35px;
+        }
+
+
+        .gallery-title {
+
+            margin-bottom: 20px;
+        }
+
+
+        .gallery-title h4 {
+
+            font-size: 1.25rem;
+
+            margin-bottom: 4px;
+        }
+
+
+        .gallery-title p {
+
+            color: var(--muted);
+
+            font-size: 0.85rem;
+        }
+
+
+        .dashboard-gallery {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 18px;
+        }
+
+
+        .gallery-item {
+
+            position: relative;
+
+            overflow: hidden;
+
+            border-radius: 18px;
+
+            background: #0a1423;
+
+            border:
+                1px solid
+                var(--border);
+
+            cursor: pointer;
+
+            min-height: 220px;
+        }
+
+
+        .gallery-item img {
+
+            display: block;
+
+            width: 100%;
+
+            aspect-ratio: 16 / 9;
+
+            object-fit: cover;
+
+            transition:
+                transform 0.45s ease,
+                filter 0.45s ease;
+        }
+
+
+        .gallery-item:hover img {
+
+            transform: scale(1.04);
+
+            filter: brightness(0.78);
+        }
+
+
+        .gallery-caption {
+
+            position: absolute;
+
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            padding:
+                55px 18px
+                17px;
+
+            background:
+                linear-gradient(
+                    transparent,
+                    rgba(0, 0, 0, 0.9)
+                );
+        }
+
+
+        .gallery-caption strong {
+
+            display: block;
+
+            font-size: 0.95rem;
+
+            margin-bottom: 3px;
+        }
+
+
+        .gallery-caption span {
+
+            color: #b7c3d3;
+
+            font-size: 0.75rem;
+        }
+
+
+        /* =========================================================
+           LIGHTBOX
+        ========================================================= */
+
+        .lightbox {
+
+            position: fixed;
+
+            inset: 0;
+
+            z-index: 2000;
+
+            display: none;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 30px;
+
+            background:
+                rgba(0, 0, 0, 0.92);
+
+            backdrop-filter: blur(8px);
+        }
+
+
+        .lightbox.active {
+
+            display: flex;
+        }
+
+
+        .lightbox img {
+
+            max-width: 94vw;
+
+            max-height: 88vh;
+
+            object-fit: contain;
+
+            border-radius: 12px;
+
+            box-shadow:
+                0 30px 100px
+                rgba(0, 0, 0, 0.6);
+        }
+
+
+        .lightbox-close {
+
+            position: fixed;
+
+            top: 22px;
+
+            right: 28px;
+
+            width: 45px;
+
+            height: 45px;
+
+            border-radius: 50%;
+
+            border:
+                1px solid
+                rgba(255, 255, 255, 0.15);
+
+            background:
+                rgba(255, 255, 255, 0.08);
+
+            color: white;
+
+            font-size: 1.5rem;
+
+            cursor: pointer;
+        }
+
+
+        /* =========================================================
+           INSIGHTS
+        ========================================================= */
+
+        .insights-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 17px;
+        }
+
+
+        .insight {
+
+            padding: 25px;
+
+            border-radius: 20px;
+
+            background: var(--card);
+
+            border:
+                1px solid
+                var(--border);
+        }
+
+
+        .insight-number {
+
+            font-size: 2rem;
+
+            font-weight: 850;
+
+            color: var(--primary);
+
+            margin-bottom: 8px;
+        }
+
+
+        .insight h3 {
+
+            margin-bottom: 7px;
+        }
+
+
+        .insight p {
+
+            color: var(--muted);
+
+            font-size: 0.9rem;
+        }
+
+
+        /* =========================================================
+           CONTACT
+        ========================================================= */
+
+        .contact {
+
+            text-align: center;
+
+            padding-bottom: 120px;
+        }
+
+
+        .contact-box {
+
+            max-width: 800px;
+
+            margin: auto;
+
+            padding: 50px 30px;
+
+            border-radius: 28px;
+
+            background:
+
+                radial-gradient(
+                    circle at top,
+                    rgba(94, 234, 212, 0.10),
+                    transparent 60%
+                ),
+
+                var(--card);
+
+            border:
+                1px solid
+                var(--border);
+        }
+
+
+        .contact-box h2 {
+
+            font-size:
+                clamp(2rem, 5vw, 3.3rem);
+
+            margin-bottom: 13px;
+        }
+
+
+        .contact-box p {
+
+            color: var(--muted);
+
+            margin-bottom: 28px;
+        }
+
+
+        .contact-buttons {
+
+            justify-content: center;
+        }
+
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        footer {
+
+            border-top:
+                1px solid
+                var(--border);
+
+            padding: 28px 0;
+
+            color: var(--muted);
+
+            font-size: 0.82rem;
+        }
+
+
+        .footer-inner {
+
+            display: flex;
+
             justify-content: space-between;
+
             gap: 20px;
+
             flex-wrap: wrap;
         }
 
-        /* =========================
-           REVEAL ANIMATION
-        ========================== */
+
+        /* =========================================================
+           SCROLL ANIMATION
+        ========================================================= */
 
         .reveal {
+
             opacity: 0;
+
             transform: translateY(22px);
-            transition: 0.7s ease;
+
+            transition:
+                opacity 0.7s ease,
+                transform 0.7s ease;
         }
 
+
         .reveal.visible {
+
             opacity: 1;
+
             transform: translateY(0);
         }
 
-        /* =========================
+
+        /* =========================================================
            RESPONSIVE
-        ========================== */
+        ========================================================= */
 
         @media (max-width: 900px) {
 
             .hero-grid,
             .about-grid {
+
                 grid-template-columns: 1fr;
             }
 
+
             .skills-grid {
-                grid-template-columns: repeat(2, 1fr);
+
+                grid-template-columns:
+                    repeat(2, 1fr);
             }
+
 
             .insights-grid {
-                grid-template-columns: 1fr 1fr;
+
+                grid-template-columns:
+                    repeat(2, 1fr);
             }
 
+
             .hero-card {
+
                 max-width: 600px;
             }
         }
 
+
         @media (max-width: 650px) {
 
             .nav-links {
+
                 display: none;
             }
 
+
             .hero {
+
                 padding-top: 120px;
             }
 
+
             .hero h1 {
+
                 letter-spacing: -2px;
             }
 
+
             .skills-grid,
             .insights-grid,
-            .stat-grid {
+            .stat-grid,
+            .dashboard-gallery {
+
                 grid-template-columns: 1fr;
             }
 
+
             .project-content {
+
                 padding: 25px;
             }
 
+
             .project-content h3 {
+
                 font-size: 1.6rem;
             }
 
+
             .project-image,
             .project-image img {
+
                 min-height: 230px;
             }
+
+
+            .gallery-section {
+
+                padding:
+                    0 20px
+                    25px;
+            }
+
+
+            .footer-inner {
+
+                flex-direction: column;
+
+                text-align: center;
+            }
         }
+
     </style>
 </head>
 
+
 <body>
 
-    <!-- =========================
+
+    <!-- =========================================================
          NAVIGATION
-    ========================== -->
+    ========================================================= -->
 
     <nav>
+
         <div class="container nav-inner">
 
             <a href="#home" class="logo">
@@ -653,71 +1307,120 @@
             </a>
 
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#insights">Insights</a></li>
-                <li><a href="#contact">Contact</a></li>
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#skills">Skills</a>
+                </li>
+
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
+
+                <li>
+                    <a href="#insights">Insights</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+
             </ul>
 
         </div>
+
     </nav>
 
 
-    <!-- =========================
+    <!-- =========================================================
          HERO
-    ========================== -->
+    ========================================================= -->
 
     <header class="hero" id="home">
 
         <div class="container hero-grid">
 
+
             <div class="reveal">
 
                 <div class="eyebrow">
+
                     <span class="dot"></span>
+
                     Open to Data Analyst Opportunities
+
                 </div>
+
 
                 <h1>
+
                     Hi, I'm<br>
+
                     <span>Salah Alrhabi.</span>
+
                 </h1>
 
+
                 <div class="hero-subtitle">
+
                     Data Analyst
+
                 </div>
 
+
                 <p class="hero-description">
-                    I transform data into meaningful insights, interactive
-                    dashboards, and clear visualizations that help businesses
-                    understand performance and make better decisions.
+
+                    I transform data into meaningful insights,
+                    interactive dashboards, and clear visualizations
+                    that help businesses understand performance
+                    and make better decisions.
+
                 </p>
+
 
                 <div class="buttons">
 
-                    <a href="#projects" class="btn btn-primary">
+                    <a
+                        href="#projects"
+                        class="btn btn-primary">
+
                         View My Project
+
                     </a>
+
 
                     <a
                         href="https://github.com/SalahAlrhabi"
                         target="_blank"
+                        rel="noopener"
                         class="btn btn-outline">
+
                         GitHub ↗
+
                     </a>
 
+
+                    <!-- ضع رابط LinkedIn الحقيقي هنا -->
+
                     <a
-                        href="https://www.linkedin.com/"
+                        href="YOUR_LINKEDIN_URL"
                         target="_blank"
+                        rel="noopener"
                         class="btn btn-outline">
+
                         LinkedIn ↗
+
                     </a>
 
                 </div>
 
             </div>
 
+
+            <!-- PROFILE CARD -->
 
             <div class="hero-card reveal">
 
@@ -730,32 +1433,71 @@
                         </div>
 
                         <div>
-                            <h3>Salah Alrhabi</h3>
-                            <p>Data Analyst · Power BI</p>
+
+                            <h3>
+                                Salah Alrhabi
+                            </h3>
+
+                            <p>
+                                Data Analyst · Power BI
+                            </p>
+
                         </div>
 
                     </div>
 
+
                     <div class="stat-grid">
 
                         <div class="stat">
-                            <strong>Power BI</strong>
-                            <span>Business Intelligence</span>
+
+                            <strong>
+                                Power BI
+                            </strong>
+
+                            <span>
+                                Business Intelligence
+                            </span>
+
                         </div>
 
-                        <div class="stat">
-                            <strong>SQL</strong>
-                            <span>Data Analysis</span>
-                        </div>
 
                         <div class="stat">
-                            <strong>Python</strong>
-                            <span>Analytics</span>
+
+                            <strong>
+                                SQL
+                            </strong>
+
+                            <span>
+                                Data Analysis
+                            </span>
+
                         </div>
 
+
                         <div class="stat">
-                            <strong>Excel</strong>
-                            <span>Data Preparation</span>
+
+                            <strong>
+                                Python
+                            </strong>
+
+                            <span>
+                                Analytics
+                            </span>
+
+                        </div>
+
+
+                        <div class="stat">
+
+                            <strong>
+                                Excel
+                            </strong>
+
+                            <span>
+                                Data Preparation
+                            </span>
+
                         </div>
 
                     </div>
@@ -769,13 +1511,14 @@
     </header>
 
 
-    <!-- =========================
+    <!-- =========================================================
          ABOUT
-    ========================== -->
+    ========================================================= -->
 
     <section id="about">
 
         <div class="container">
+
 
             <div class="section-heading reveal">
 
@@ -788,8 +1531,8 @@
                 </h2>
 
                 <p>
-                    I am an Information Technology graduate focused on building
-                    my career as a Data Analyst.
+                    I am an Information Technology graduate
+                    focused on building my career as a Data Analyst.
                 </p>
 
             </div>
@@ -797,15 +1540,20 @@
 
             <div class="about-grid">
 
+
                 <div class="card reveal">
 
                     <p>
-                        I have hands-on experience working with Microsoft
-                        Power BI, SQL, Python, and Excel. I enjoy transforming
-                        raw data into meaningful insights, interactive
-                        dashboards, and clear visualizations that support
-                        better business decision-making.
+
+                        I have hands-on experience working with
+                        Microsoft Power BI, SQL, Python, and Excel.
+                        I enjoy transforming raw data into meaningful
+                        insights, interactive dashboards, and clear
+                        visualizations that support better business
+                        decision-making.
+
                     </p>
+
 
                     <ul class="about-list">
 
@@ -837,18 +1585,25 @@
                 <div class="card reveal">
 
                     <p>
-                        I am continuously developing my skills through
-                        practical projects focused on data analysis,
-                        statistics, business intelligence, and data
-                        visualization.
+
+                        I am continuously developing my skills
+                        through practical projects focused on
+                        data analysis, statistics, business
+                        intelligence, and data visualization.
+
                     </p>
+
 
                     <br>
 
+
                     <p>
-                        My goal is to contribute to data-driven organizations
-                        by turning complex datasets into clear business
-                        insights and actionable recommendations.
+
+                        My goal is to contribute to data-driven
+                        organizations by turning complex datasets
+                        into clear business insights and actionable
+                        recommendations.
+
                     </p>
 
                 </div>
@@ -860,13 +1615,14 @@
     </section>
 
 
-    <!-- =========================
+    <!-- =========================================================
          SKILLS
-    ========================== -->
+    ========================================================= -->
 
     <section id="skills">
 
         <div class="container">
+
 
             <div class="section-heading reveal">
 
@@ -879,8 +1635,11 @@
                 </h2>
 
                 <p>
-                    Technologies and analytical skills I use to transform
-                    data into useful business information.
+
+                    Technologies and analytical skills I use
+                    to transform data into useful business
+                    information.
+
                 </p>
 
             </div>
@@ -888,44 +1647,108 @@
 
             <div class="skills-grid">
 
-                <div class="skill reveal">
-                    <strong>Microsoft Power BI</strong>
-                    <span>Dashboards & BI</span>
-                </div>
 
                 <div class="skill reveal">
-                    <strong>SQL</strong>
-                    <span>Data Analysis & Queries</span>
+
+                    <strong>
+                        Microsoft Power BI
+                    </strong>
+
+                    <span>
+                        Dashboards & BI
+                    </span>
+
                 </div>
 
-                <div class="skill reveal">
-                    <strong>Python</strong>
-                    <span>Data Analytics</span>
-                </div>
 
                 <div class="skill reveal">
-                    <strong>Microsoft Excel</strong>
-                    <span>Data Preparation</span>
+
+                    <strong>
+                        SQL
+                    </strong>
+
+                    <span>
+                        Data Analysis & Queries
+                    </span>
+
                 </div>
 
-                <div class="skill reveal">
-                    <strong>DAX</strong>
-                    <span>Measures & KPIs</span>
-                </div>
 
                 <div class="skill reveal">
-                    <strong>Power Query</strong>
-                    <span>Data Transformation</span>
+
+                    <strong>
+                        Python
+                    </strong>
+
+                    <span>
+                        Data Analytics
+                    </span>
+
                 </div>
 
-                <div class="skill reveal">
-                    <strong>Data Modeling</strong>
-                    <span>Star Schema</span>
-                </div>
 
                 <div class="skill reveal">
-                    <strong>Data Visualization</strong>
-                    <span>Business Insights</span>
+
+                    <strong>
+                        Microsoft Excel
+                    </strong>
+
+                    <span>
+                        Data Preparation
+                    </span>
+
+                </div>
+
+
+                <div class="skill reveal">
+
+                    <strong>
+                        DAX
+                    </strong>
+
+                    <span>
+                        Measures & KPIs
+                    </span>
+
+                </div>
+
+
+                <div class="skill reveal">
+
+                    <strong>
+                        Power Query
+                    </strong>
+
+                    <span>
+                        Data Transformation
+                    </span>
+
+                </div>
+
+
+                <div class="skill reveal">
+
+                    <strong>
+                        Data Modeling
+                    </strong>
+
+                    <span>
+                        Star Schema
+                    </span>
+
+                </div>
+
+
+                <div class="skill reveal">
+
+                    <strong>
+                        Data Visualization
+                    </strong>
+
+                    <span>
+                        Business Insights
+                    </span>
+
                 </div>
 
             </div>
@@ -935,13 +1758,14 @@
     </section>
 
 
-    <!-- =========================
+    <!-- =========================================================
          PROJECT
-    ========================== -->
+    ========================================================= -->
 
     <section id="projects">
 
         <div class="container">
+
 
             <div class="section-heading reveal">
 
@@ -954,9 +1778,12 @@
                 </h2>
 
                 <p>
-                    An end-to-end Power BI business intelligence project
-                    focused on sales, profitability, customers, products,
-                    discounts, and geographic performance.
+
+                    An end-to-end Power BI business intelligence
+                    project focused on sales, profitability,
+                    customers, products, discounts, and
+                    geographic performance.
+
                 </p>
 
             </div>
@@ -964,23 +1791,19 @@
 
             <div class="project reveal">
 
+
+                <!-- MAIN EXECUTIVE DASHBOARD -->
+
                 <div class="project-image">
 
                     <img
                         src="Screenshots/01-Executive-Dashboard.png"
-                        alt="Superstore Sales and Profitability Executive Dashboard"
-                        onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-
-                    <div class="image-placeholder" style="display:none;">
-                        <strong>Executive Dashboard</strong>
-                        <span>
-                            Add your final dashboard screenshot to the
-                            Screenshots folder.
-                        </span>
-                    </div>
+                        alt="Superstore Executive Dashboard">
 
                 </div>
 
+
+                <!-- PROJECT INFORMATION -->
 
                 <div class="project-content">
 
@@ -988,23 +1811,47 @@
                         Superstore Sales & Profitability Analysis
                     </h3>
 
+
                     <p>
-                        Built an interactive Power BI solution to analyze
-                        sales performance, profitability, product and
-                        category performance, customer segments, regional
-                        performance, and the impact of discounts on profit.
+
+                        Built an interactive Power BI solution
+                        to analyze sales performance, profitability,
+                        product and category performance, customer
+                        segments, regional performance, and the
+                        impact of discounts on profit.
+
                     </p>
 
 
                     <div class="tags">
 
-                        <span class="tag">Power BI</span>
-                        <span class="tag">DAX</span>
-                        <span class="tag">Power Query</span>
-                        <span class="tag">SQL</span>
-                        <span class="tag">Excel</span>
-                        <span class="tag">Data Modeling</span>
-                        <span class="tag">Data Visualization</span>
+                        <span class="tag">
+                            Power BI
+                        </span>
+
+                        <span class="tag">
+                            DAX
+                        </span>
+
+                        <span class="tag">
+                            Power Query
+                        </span>
+
+                        <span class="tag">
+                            SQL
+                        </span>
+
+                        <span class="tag">
+                            Excel
+                        </span>
+
+                        <span class="tag">
+                            Data Modeling
+                        </span>
+
+                        <span class="tag">
+                            Data Visualization
+                        </span>
 
                     </div>
 
@@ -1014,16 +1861,150 @@
                         <a
                             href="https://github.com/SalahAlrhabi/superstore-sales-profitability-analysis"
                             target="_blank"
+                            rel="noopener"
                             class="btn btn-primary">
+
                             View GitHub
+
                         </a>
+
 
                         <a
                             href="Superstore_Sales_Profitability_Project_Documentation.pdf"
                             target="_blank"
+                            rel="noopener"
                             class="btn btn-outline">
+
                             Project Documentation
+
                         </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     DASHBOARD GALLERY
+                ================================================== -->
+
+                <div class="gallery-section">
+
+
+                    <div class="gallery-title">
+
+                        <h4>
+                            Project Preview
+                        </h4>
+
+                        <p>
+                            Explore the dashboards and data model.
+                        </p>
+
+                    </div>
+
+
+                    <div class="dashboard-gallery">
+
+
+                        <!-- EXECUTIVE -->
+
+                        <div
+                            class="gallery-item"
+                            onclick="openLightbox('Screenshots/01-Executive-Dashboard.png')">
+
+                            <img
+                                src="Screenshots/01-Executive-Dashboard.png"
+                                alt="Executive Dashboard">
+
+                            <div class="gallery-caption">
+
+                                <strong>
+                                    Executive Dashboard
+                                </strong>
+
+                                <span>
+                                    Overall sales and profitability performance
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- SALES -->
+
+                        <div
+                            class="gallery-item"
+                            onclick="openLightbox('Screenshots/02-Sales-Product-Analysis.png')">
+
+                            <img
+                                src="Screenshots/02-Sales-Product-Analysis.png"
+                                alt="Sales and Product Analysis">
+
+                            <div class="gallery-caption">
+
+                                <strong>
+                                    Sales & Product Analysis
+                                </strong>
+
+                                <span>
+                                    Product, category and customer performance
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- PROFITABILITY -->
+
+                        <div
+                            class="gallery-item"
+                            onclick="openLightbox('Screenshots/03-Profitability-Dashboard.png')">
+
+                            <img
+                                src="Screenshots/03-Profitability-Dashboard.png"
+                                alt="Profitability Dashboard">
+
+                            <div class="gallery-caption">
+
+                                <strong>
+                                    Profitability Dashboard
+                                </strong>
+
+                                <span>
+                                    Profit margins, discounts and loss-making areas
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- DATA MODEL -->
+
+                        <div
+                            class="gallery-item"
+                            onclick="openLightbox('Screenshots/04-Data-Model.png')">
+
+                            <img
+                                src="Screenshots/04-Data-Model.png"
+                                alt="Power BI Data Model">
+
+                            <div class="gallery-caption">
+
+                                <strong>
+                                    Data Model
+                                </strong>
+
+                                <span>
+                                    Star Schema and analytical relationships
+                                </span>
+
+                            </div>
+
+                        </div>
 
                     </div>
 
@@ -1036,13 +2017,14 @@
     </section>
 
 
-    <!-- =========================
-         INSIGHTS
-    ========================== -->
+    <!-- =========================================================
+         BUSINESS INSIGHTS
+    ========================================================= -->
 
     <section id="insights">
 
         <div class="container">
+
 
             <div class="section-heading reveal">
 
@@ -1063,6 +2045,7 @@
 
             <div class="insights-grid">
 
+
                 <div class="insight reveal">
 
                     <div class="insight-number">
@@ -1074,8 +2057,11 @@
                     </h3>
 
                     <p>
-                        Sales increased by approximately 46.88% year over
-                        year during the analyzed period.
+
+                        Sales increased by approximately
+                        46.88% year over year during the
+                        analyzed period.
+
                     </p>
 
                 </div>
@@ -1092,8 +2078,10 @@
                     </h3>
 
                     <p>
-                        Technology generated approximately $836K in sales
-                        and $145K in profit.
+
+                        Technology generated approximately
+                        $836K in sales and $145K in profit.
+
                     </p>
 
                 </div>
@@ -1110,8 +2098,10 @@
                     </h3>
 
                     <p>
-                        Furniture generated high sales but relatively weak
-                        profitability.
+
+                        Furniture generated high sales but
+                        relatively weak profitability.
+
                     </p>
 
                 </div>
@@ -1128,8 +2118,11 @@
                     </h3>
 
                     <p>
-                        Tables generated approximately $207K in sales but
-                        produced a negative profit.
+
+                        Tables generated approximately
+                        $207K in sales but produced
+                        negative profit.
+
                     </p>
 
                 </div>
@@ -1146,8 +2139,11 @@
                     </h3>
 
                     <p>
-                        Central showed comparatively low profitability despite
-                        generating significant sales.
+
+                        Central showed comparatively low
+                        profitability despite generating
+                        significant sales.
+
                     </p>
 
                 </div>
@@ -1164,8 +2160,11 @@
                     </h3>
 
                     <p>
-                        The West region demonstrated strong overall
-                        performance in the analysis.
+
+                        The West region demonstrated
+                        strong overall performance
+                        in the analysis.
+
                     </p>
 
                 </div>
@@ -1177,50 +2176,76 @@
     </section>
 
 
-    <!-- =========================
+    <!-- =========================================================
          CONTACT
-    ========================== -->
+    ========================================================= -->
 
-    <section id="contact" class="contact">
+    <section
+        id="contact"
+        class="contact">
 
         <div class="container">
 
+
             <div class="contact-box reveal">
+
 
                 <div class="section-label">
                     Contact
                 </div>
 
+
                 <h2>
                     Let's connect.
                 </h2>
 
+
                 <p>
-                    I am currently seeking opportunities as a Data Analyst
-                    and would be happy to connect with recruiters,
-                    professionals, and organizations.
+
+                    I am currently seeking opportunities
+                    as a Data Analyst and would be happy
+                    to connect with recruiters, professionals,
+                    and organizations.
+
                 </p>
 
-                <div class="buttons" style="justify-content:center;">
+
+                <div
+                    class="buttons contact-buttons">
+
+
+                    <!-- ضع بريدك الحقيقي هنا -->
 
                     <a
                         href="mailto:YOUR_EMAIL@example.com"
                         class="btn btn-primary">
+
                         Email Me
+
                     </a>
 
+
+                    <!-- ضع رابط LinkedIn الحقيقي هنا -->
+
                     <a
-                        href="https://www.linkedin.com/"
+                        href="YOUR_LINKEDIN_URL"
                         target="_blank"
+                        rel="noopener"
                         class="btn btn-outline">
+
                         LinkedIn
+
                     </a>
+
 
                     <a
                         href="https://github.com/SalahAlrhabi"
                         target="_blank"
+                        rel="noopener"
                         class="btn btn-outline">
+
                         GitHub
+
                     </a>
 
                 </div>
@@ -1232,9 +2257,9 @@
     </section>
 
 
-    <!-- =========================
+    <!-- =========================================================
          FOOTER
-    ========================== -->
+    ========================================================= -->
 
     <footer>
 
@@ -1253,33 +2278,164 @@
     </footer>
 
 
-    <!-- =========================
+    <!-- =========================================================
+         LIGHTBOX
+    ========================================================= -->
+
+    <div
+        class="lightbox"
+        id="lightbox"
+        onclick="closeLightbox(event)">
+
+        <button
+            class="lightbox-close"
+            onclick="closeLightbox()"
+            aria-label="Close image">
+
+            ×
+
+        </button>
+
+
+        <img
+            id="lightbox-image"
+            src=""
+            alt="Dashboard Preview">
+
+    </div>
+
+
+    <!-- =========================================================
          JAVASCRIPT
-    ========================== -->
+    ========================================================= -->
 
     <script>
 
-        const observer = new IntersectionObserver(
-            (entries) => {
 
-                entries.forEach(entry => {
+        /* =====================================================
+           SCROLL REVEAL
+        ===================================================== */
 
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("visible");
-                    }
+        const observer =
+            new IntersectionObserver(
 
-                });
+                (entries) => {
 
-            },
-            {
-                threshold: 0.12
-            }
-        );
+                    entries.forEach(
+
+                        (entry) => {
+
+                            if (
+                                entry.isIntersecting
+                            ) {
+
+                                entry.target
+                                    .classList
+                                    .add("visible");
+
+                            }
+
+                        }
+
+                    );
+
+                },
+
+                {
+                    threshold: 0.12
+                }
+
+            );
 
 
         document
             .querySelectorAll(".reveal")
-            .forEach(element => observer.observe(element));
+            .forEach(
+
+                element =>
+                    observer.observe(element)
+
+            );
+
+
+        /* =====================================================
+           LIGHTBOX
+        ===================================================== */
+
+        function openLightbox(imagePath) {
+
+            const lightbox =
+                document.getElementById(
+                    "lightbox"
+                );
+
+            const image =
+                document.getElementById(
+                    "lightbox-image"
+                );
+
+
+            image.src = imagePath;
+
+            lightbox.classList.add(
+                "active"
+            );
+
+            document.body.style.overflow =
+                "hidden";
+        }
+
+
+        function closeLightbox(event) {
+
+            if (
+                event &&
+                event.target &&
+                event.target.id ===
+                    "lightbox-image"
+            ) {
+
+                return;
+            }
+
+
+            const lightbox =
+                document.getElementById(
+                    "lightbox"
+                );
+
+
+            lightbox.classList.remove(
+                "active"
+            );
+
+
+            document.body.style.overflow =
+                "";
+        }
+
+
+        /* =====================================================
+           ESC KEY
+        ===================================================== */
+
+        document.addEventListener(
+
+            "keydown",
+
+            function(event) {
+
+                if (
+                    event.key === "Escape"
+                ) {
+
+                    closeLightbox();
+
+                }
+
+            }
+
+        );
 
     </script>
 
