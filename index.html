@@ -3,29 +3,45 @@
 <head>
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <meta
-        name="keywords"
-        content="Data Analyst, Power BI, SQL, Python, Excel, DAX, Power Query, Data Visualization, Business Intelligence, Data Modeling, Star Schema"
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
     >
 
     <meta
         name="keywords"
-        content="Data Analyst, Power BI, SQL, Python, Excel, DAX, Power Query, Data Visualization"
+        content="Data Analyst, SQL, MySQL, Power BI, Python, Excel, DAX, Power Query, Data Analysis, Data Visualization, Business Intelligence, Data Modeling"
     >
 
-    <meta name="author" content="Salah Alrhabi">
-    
-    <meta property="og:title" content="Salah Alrhabi | Data Analyst Portfolio">
+    <meta
+        name="author"
+        content="Salah Alrhabi"
+    >
 
-    <meta property="og:description" content="Data Analyst portfolio featuring Power BI dashboards, SQL analysis, Python projects and business insights.">
+    <meta
+        property="og:title"
+        content="Salah Alrhabi | Data Analyst Portfolio"
+    >
 
-    <meta property="og:image" content="Screenshots/01-Executive-Dashboard.png">    
+    <meta
+        property="og:description"
+        content="Data Analyst portfolio featuring Power BI dashboards, SQL analysis, data visualization and business insights."
+    >
 
-    <meta property="og:type" content="website">
+    <meta
+        property="og:image"
+        content="Screenshots/01-Executive-Dashboard.png"
+    >
 
-    <title>Salah Alrhabi | Data Analyst Portfolio | Power BI & SQL</title>
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <title>
+        Salah Alrhabi | Data Analyst Portfolio | Power BI & SQL
+    </title>
+
 
     <style>
 
@@ -40,9 +56,12 @@
             scroll-behavior: smooth;
         }
 
+
         :root {
+
             --bg: #07111f;
             --bg-secondary: #0c1728;
+
             --card: rgba(17, 30, 50, 0.72);
             --card-solid: #101d30;
 
@@ -359,8 +378,7 @@
             font-size: 0.92rem;
 
             border:
-                1px solid
-                var(--border);
+                1px solid var(--border);
 
             transition:
                 transform 0.25s ease,
@@ -418,8 +436,7 @@
             background: var(--card);
 
             border:
-                1px solid
-                var(--border);
+                1px solid var(--border);
 
             backdrop-filter: blur(20px);
 
@@ -502,8 +519,7 @@
                 rgba(255, 255, 255, 0.035);
 
             border:
-                1px solid
-                var(--border);
+                1px solid var(--border);
         }
 
 
@@ -587,8 +603,7 @@
             background: var(--card);
 
             border:
-                1px solid
-                var(--border);
+                1px solid var(--border);
 
             border-radius: var(--radius);
 
@@ -673,8 +688,7 @@
             background: var(--card);
 
             border:
-                1px solid
-                var(--border);
+                1px solid var(--border);
 
             transition: 0.25s ease;
         }
@@ -706,7 +720,7 @@
 
 
         /* =========================================================
-           PROJECT
+           PROJECT - POWER BI
         ========================================================= */
 
         .project {
@@ -724,12 +738,13 @@
                 var(--card);
 
             border:
-                1px solid
-                var(--border);
+                1px solid var(--border);
 
             border-radius: 28px;
 
             box-shadow: var(--shadow);
+
+            margin-bottom: 40px;
         }
 
 
@@ -748,8 +763,7 @@
             background: #0a1423;
 
             border-bottom:
-                1px solid
-                var(--border);
+                1px solid var(--border);
         }
 
 
@@ -878,8 +892,7 @@
             background: #0a1423;
 
             border:
-                1px solid
-                var(--border);
+                1px solid var(--border);
 
             cursor: pointer;
 
@@ -944,6 +957,266 @@
         .gallery-caption span {
 
             color: #b7c3d3;
+
+            font-size: 0.75rem;
+        }
+
+
+        /* =========================================================
+           SQL PROJECT
+        ========================================================= */
+
+        .sql-project {
+
+            display: grid;
+
+            grid-template-columns:
+                0.9fr 1.1fr;
+
+            overflow: hidden;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    rgba(94, 234, 212, 0.06),
+                    rgba(96, 165, 250, 0.05)
+                ),
+
+                var(--card);
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 28px;
+
+            box-shadow: var(--shadow);
+
+            margin-top: 40px;
+        }
+
+
+        .sql-visual {
+
+            min-height: 500px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 35px;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(94, 234, 212, 0.08),
+                    transparent 65%
+                ),
+
+                #081321;
+
+            border-right:
+                1px solid var(--border);
+        }
+
+
+        .sql-code-card {
+
+            width: 100%;
+
+            max-width: 470px;
+
+            border-radius: 18px;
+
+            overflow: hidden;
+
+            background: #0b1626;
+
+            border:
+                1px solid
+                rgba(255, 255, 255, 0.10);
+
+            box-shadow:
+                0 25px 70px
+                rgba(0, 0, 0, 0.40);
+        }
+
+
+        .sql-window {
+
+            height: 44px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 7px;
+
+            padding: 0 16px;
+
+            border-bottom:
+                1px solid
+                rgba(255, 255, 255, 0.08);
+
+            background:
+                rgba(255, 255, 255, 0.025);
+        }
+
+
+        .sql-window span {
+
+            width: 9px;
+
+            height: 9px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(255, 255, 255, 0.22);
+        }
+
+
+        .sql-code {
+
+            padding: 28px 25px;
+
+            color: #d7e3f1;
+
+            font-family:
+                "Consolas",
+                "Courier New",
+                monospace;
+
+            font-size: 0.86rem;
+
+            line-height: 1.9;
+
+            overflow: hidden;
+        }
+
+
+        .sql-keyword {
+
+            color: var(--primary);
+
+            font-weight: 700;
+        }
+
+
+        .sql-function {
+
+            color: var(--secondary);
+
+        }
+
+
+        .sql-number {
+
+            color: #f0abfc;
+        }
+
+
+        .sql-project-content {
+
+            padding: 45px;
+        }
+
+
+        .sql-project-content h3 {
+
+            font-size: 2rem;
+
+            margin-bottom: 13px;
+
+        }
+
+
+        .sql-project-content > p {
+
+            color: var(--muted);
+
+            margin-bottom: 25px;
+
+            max-width: 650px;
+        }
+
+
+        .sql-metrics {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 12px;
+
+            margin:
+                5px 0 25px;
+        }
+
+
+        .sql-metric {
+
+            padding: 17px;
+
+            border-radius: 15px;
+
+            background:
+                rgba(255, 255, 255, 0.035);
+
+            border:
+                1px solid var(--border);
+        }
+
+
+        .sql-metric strong {
+
+            display: block;
+
+            color: var(--primary);
+
+            font-size: 1.25rem;
+
+            margin-bottom: 3px;
+        }
+
+
+        .sql-metric span {
+
+            color: var(--muted);
+
+            font-size: 0.75rem;
+        }
+
+
+        .sql-features {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
+
+            margin-bottom: 28px;
+        }
+
+
+        .sql-feature {
+
+            padding: 6px 10px;
+
+            border-radius: 8px;
+
+            background:
+                rgba(96, 165, 250, 0.07);
+
+            border:
+                1px solid
+                rgba(96, 165, 250, 0.14);
+
+            color: #c7dcf8;
 
             font-size: 0.75rem;
         }
@@ -1051,8 +1324,7 @@
             background: var(--card);
 
             border:
-                1px solid
-                var(--border);
+                1px solid var(--border);
         }
 
 
@@ -1115,8 +1387,7 @@
                 var(--card);
 
             border:
-                1px solid
-                var(--border);
+                1px solid var(--border);
         }
 
 
@@ -1150,8 +1421,7 @@
         footer {
 
             border-top:
-                1px solid
-                var(--border);
+                1px solid var(--border);
 
             padding: 28px 0;
 
@@ -1198,15 +1468,21 @@
 
 
         /* =========================================================
-           RESPONSIVE
+           RESPONSIVE - TABLET
         ========================================================= */
 
-        @media (max-width: 900px) {
+        @media (max-width: 1000px) {
 
             .hero-grid,
             .about-grid {
 
                 grid-template-columns: 1fr;
+            }
+
+
+            .hero-card {
+
+                max-width: 600px;
             }
 
 
@@ -1217,19 +1493,34 @@
             }
 
 
+            .sql-project {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .sql-visual {
+
+                min-height: 430px;
+
+                border-right: none;
+
+                border-bottom:
+                    1px solid var(--border);
+            }
+
+
             .insights-grid {
 
                 grid-template-columns:
                     repeat(2, 1fr);
             }
-
-
-            .hero-card {
-
-                max-width: 600px;
-            }
         }
 
+
+        /* =========================================================
+           RESPONSIVE - MOBILE
+        ========================================================= */
 
         @media (max-width: 650px) {
 
@@ -1287,6 +1578,40 @@
             }
 
 
+            .sql-project-content {
+
+                padding: 28px 24px;
+            }
+
+
+            .sql-project-content h3 {
+
+                font-size: 1.6rem;
+            }
+
+
+            .sql-visual {
+
+                min-height: 350px;
+
+                padding: 20px;
+            }
+
+
+            .sql-code {
+
+                padding: 22px 17px;
+
+                font-size: 0.72rem;
+            }
+
+
+            .sql-metrics {
+
+                grid-template-columns: 1fr;
+            }
+
+
             .footer-inner {
 
                 flex-direction: column;
@@ -1314,26 +1639,37 @@
                 Salah<span>.</span>
             </a>
 
+
             <ul class="nav-links">
 
                 <li>
-                    <a href="#about">About</a>
+                    <a href="#about">
+                        About
+                    </a>
                 </li>
 
                 <li>
-                    <a href="#skills">Skills</a>
+                    <a href="#skills">
+                        Skills
+                    </a>
                 </li>
 
                 <li>
-                    <a href="#projects">Projects</a>
+                    <a href="#projects">
+                        Projects
+                    </a>
                 </li>
 
                 <li>
-                    <a href="#insights">Insights</a>
+                    <a href="#insights">
+                        Insights
+                    </a>
                 </li>
 
                 <li>
-                    <a href="#contact">Contact</a>
+                    <a href="#contact">
+                        Contact
+                    </a>
                 </li>
 
             </ul>
@@ -1381,10 +1717,11 @@
 
                 <p class="hero-description">
 
-                    I transform data into meaningful insights,
-                    interactive dashboards, and clear visualizations
-                    that help businesses understand performance
-                    and make better decisions.
+                    I analyze and transform data using SQL,
+                    Power BI, Excel, and data visualization
+                    techniques to uncover meaningful insights,
+                    understand business performance, and support
+                    data-driven decision-making.
 
                 </p>
 
@@ -1395,7 +1732,7 @@
                         href="#projects"
                         class="btn btn-primary">
 
-                        View My Project
+                        View My Projects
 
                     </a>
 
@@ -1410,8 +1747,6 @@
 
                     </a>
 
-
-                    <!-- ضع رابط LinkedIn الحقيقي هنا -->
 
                     <a
                         href="https://www.linkedin.com/in/salah-alrhabi/"
@@ -1440,6 +1775,7 @@
                             SA
                         </div>
 
+
                         <div>
 
                             <h3>
@@ -1447,7 +1783,7 @@
                             </h3>
 
                             <p>
-                                Data Analyst · Power BI
+                                Data Analyst · Power BI · SQL
                             </p>
 
                         </div>
@@ -1490,7 +1826,7 @@
                             </strong>
 
                             <span>
-                                Analytics
+                                Developing
                             </span>
 
                         </div>
@@ -1534,9 +1870,11 @@
                     About Me
                 </div>
 
+
                 <h2>
                     Turning data into decisions.
                 </h2>
+
 
                 <p>
                     I am an Information Technology graduate
@@ -1554,11 +1892,9 @@
                     <p>
 
                         I have hands-on experience working with
-                        Microsoft Power BI, SQL, Python, and Excel.
-                        I enjoy transforming raw data into meaningful
-                        insights, interactive dashboards, and clear
-                        visualizations that support better business
-                        decision-making.
+                        Microsoft Power BI, SQL, and Excel, while
+                        continuing to develop my Python skills
+                        through practical data analysis projects.
 
                     </p>
 
@@ -1638,9 +1974,11 @@
                     Skills
                 </div>
 
+
                 <h2>
                     My analytical toolkit.
                 </h2>
+
 
                 <p>
 
@@ -1685,11 +2023,24 @@
                 <div class="skill reveal">
 
                     <strong>
+                        MySQL
+                    </strong>
+
+                    <span>
+                        Relational Databases
+                    </span>
+
+                </div>
+
+
+                <div class="skill reveal">
+
+                    <strong>
                         Python
                     </strong>
 
                     <span>
-                        Data Analytics
+                        Developing
                     </span>
 
                 </div>
@@ -1767,7 +2118,7 @@
 
 
     <!-- =========================================================
-         PROJECT
+         PROJECTS
     ========================================================= -->
 
     <section id="projects">
@@ -1778,24 +2129,30 @@
             <div class="section-heading reveal">
 
                 <div class="section-label">
-                    Featured Project
+                    Selected Projects
                 </div>
 
+
                 <h2>
-                    Superstore Sales & Profitability Analysis
+                    Projects built with data.
                 </h2>
+
 
                 <p>
 
-                    An end-to-end Power BI business intelligence
-                    project focused on sales, profitability,
-                    customers, products, discounts, and
-                    geographic performance.
+                    A selection of practical data analysis
+                    projects focused on business intelligence,
+                    SQL, data modeling, visualization, and
+                    actionable insights.
 
                 </p>
 
             </div>
 
+
+            <!-- =================================================
+                 PROJECT 1 - POWER BI
+            ================================================= -->
 
             <div class="project reveal">
 
@@ -1814,6 +2171,11 @@
                 <!-- PROJECT INFORMATION -->
 
                 <div class="project-content">
+
+                    <div class="section-label">
+                        Power BI / Business Intelligence
+                    </div>
+
 
                     <h3>
                         Superstore Sales & Profitability Analysis
@@ -1872,7 +2234,7 @@
                             rel="noopener"
                             class="btn btn-primary">
 
-                            View GitHub
+                            View GitHub ↗
 
                         </a>
 
@@ -1892,9 +2254,7 @@
                 </div>
 
 
-                <!-- =================================================
-                     DASHBOARD GALLERY
-                ================================================== -->
+                <!-- DASHBOARD GALLERY -->
 
                 <div class="gallery-section">
 
@@ -1904,6 +2264,7 @@
                         <h4>
                             Project Preview
                         </h4>
+
 
                         <p>
                             Explore the dashboards and data model.
@@ -1924,6 +2285,7 @@
                             <img
                                 src="Screenshots/01-Executive-Dashboard.png"
                                 alt="Executive Dashboard">
+
 
                             <div class="gallery-caption">
 
@@ -1950,6 +2312,7 @@
                                 src="Screenshots/02-Sales-Product-Analysis.png"
                                 alt="Sales and Product Analysis">
 
+
                             <div class="gallery-caption">
 
                                 <strong>
@@ -1974,6 +2337,7 @@
                             <img
                                 src="Screenshots/03-Profitability-Dashboard.png"
                                 alt="Profitability Dashboard">
+
 
                             <div class="gallery-caption">
 
@@ -2000,6 +2364,7 @@
                                 src="Screenshots/04-Data-Model.png"
                                 alt="Power BI Data Model">
 
+
                             <div class="gallery-caption">
 
                                 <strong>
@@ -2013,6 +2378,292 @@
                             </div>
 
                         </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PROJECT 2 - SQL
+            ================================================= -->
+
+            <div class="sql-project reveal">
+
+
+                <!-- SQL VISUAL -->
+
+                <div class="sql-visual">
+
+                    <div class="sql-code-card">
+
+
+                        <div class="sql-window">
+
+                            <span></span>
+                            <span></span>
+                            <span></span>
+
+                        </div>
+
+
+                        <div class="sql-code">
+
+                            <div>
+                                <span class="sql-keyword">
+                                    SELECT
+                                </span>
+                            </div>
+
+
+                            <div>
+                                &nbsp;&nbsp;SUM(
+                                <span class="sql-function">
+                                    quantity * price
+                                </span>
+                                )
+                            </div>
+
+
+                            <div>
+                                &nbsp;&nbsp;AS Revenue
+                            </div>
+
+
+                            <div>
+                                <span class="sql-keyword">
+                                    FROM
+                                </span>
+                                Orders
+                            </div>
+
+
+                            <div>
+                                <span class="sql-keyword">
+                                    JOIN
+                                </span>
+                                Products
+                            </div>
+
+
+                            <div>
+                                &nbsp;&nbsp;
+                                <span class="sql-keyword">
+                                    ON
+                                </span>
+                                Orders.product_id
+                            </div>
+
+
+                            <div>
+                                &nbsp;&nbsp;=
+                                Products.product_id
+                            </div>
+
+
+                            <br>
+
+
+                            <div>
+                                <span class="sql-keyword">
+                                    RANK()
+                                </span>
+                                OVER (
+                            </div>
+
+
+                            <div>
+                                &nbsp;&nbsp;
+                                <span class="sql-keyword">
+                                    ORDER BY
+                                </span>
+                                Revenue
+                            </div>
+
+
+                            <div>
+                                &nbsp;&nbsp;
+                                <span class="sql-keyword">
+                                    DESC
+                                </span>
+                            </div>
+
+
+                            <div>
+                                )
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SQL PROJECT CONTENT -->
+
+                <div class="sql-project-content">
+
+
+                    <div class="section-label">
+                        SQL / Data Analysis
+                    </div>
+
+
+                    <h3>
+                        E-Commerce Sales Analysis
+                    </h3>
+
+
+                    <p>
+
+                        An end-to-end SQL analysis built with
+                        MySQL to evaluate sales, customer, product,
+                        category, and time-based performance.
+                        The project combines data validation,
+                        business analysis, and advanced SQL
+                        techniques to transform transactional
+                        data into actionable business insights.
+
+                    </p>
+
+
+                    <div class="tags">
+
+                        <span class="tag">
+                            MySQL
+                        </span>
+
+                        <span class="tag">
+                            SQL
+                        </span>
+
+                        <span class="tag">
+                            Data Analysis
+                        </span>
+
+                        <span class="tag">
+                            CTEs
+                        </span>
+
+                        <span class="tag">
+                            Window Functions
+                        </span>
+
+                        <span class="tag">
+                            Business Insights
+                        </span>
+
+                    </div>
+
+
+                    <!-- SQL METRICS -->
+
+                    <div class="sql-metrics">
+
+
+                        <div class="sql-metric">
+
+                            <strong>
+                                $21.5K
+                            </strong>
+
+                            <span>
+                                Revenue
+                            </span>
+
+                        </div>
+
+
+                        <div class="sql-metric">
+
+                            <strong>
+                                $7.95K
+                            </strong>
+
+                            <span>
+                                Profit
+                            </span>
+
+                        </div>
+
+
+                        <div class="sql-metric">
+
+                            <strong>
+                                36.98%
+                            </strong>
+
+                            <span>
+                                Profit Margin
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- SQL TECHNIQUES -->
+
+                    <div class="sql-features">
+
+                        <span class="sql-feature">
+                            JOINs
+                        </span>
+
+                        <span class="sql-feature">
+                            CTEs
+                        </span>
+
+                        <span class="sql-feature">
+                            Subqueries
+                        </span>
+
+                        <span class="sql-feature">
+                            RANK()
+                        </span>
+
+                        <span class="sql-feature">
+                            LAG()
+                        </span>
+
+                        <span class="sql-feature">
+                            PARTITION BY
+                        </span>
+
+                        <span class="sql-feature">
+                            Window Functions
+                        </span>
+
+                    </div>
+
+
+                    <!-- SQL BUTTONS -->
+
+                    <div class="buttons">
+
+                        <a
+                            href="https://github.com/SalahAlrhabi/SQL-Ecommerce-Sales-Analysis"
+                            target="_blank"
+                            rel="noopener"
+                            class="btn btn-primary">
+
+                            View GitHub ↗
+
+                        </a>
+
+
+                        <a
+                            href="https://github.com/SalahAlrhabi/SQL-Ecommerce-Sales-Analysis#readme"
+                            target="_blank"
+                            rel="noopener"
+                            class="btn btn-outline">
+
+                            Project Details
+
+                        </a>
 
                     </div>
 
@@ -2037,12 +2688,14 @@
             <div class="section-heading reveal">
 
                 <div class="section-label">
-                    Business Insights
+                    Featured Project Insights
                 </div>
+
 
                 <h2>
                     What the analysis revealed.
                 </h2>
+
 
                 <p>
                     Selected findings from the Superstore analysis.
@@ -2060,9 +2713,11 @@
                         +46.88%
                     </div>
 
+
                     <h3>
                         Sales Growth
                     </h3>
+
 
                     <p>
 
@@ -2081,9 +2736,11 @@
                         $145K
                     </div>
 
+
                     <h3>
                         Technology Profit
                     </h3>
+
 
                     <p>
 
@@ -2101,9 +2758,11 @@
                         2.49%
                     </div>
 
+
                     <h3>
                         Furniture Margin
                     </h3>
+
 
                     <p>
 
@@ -2121,9 +2780,11 @@
                         -$17.7K
                     </div>
 
+
                     <h3>
                         Tables Loss
                     </h3>
+
 
                     <p>
 
@@ -2142,9 +2803,11 @@
                         7.92%
                     </div>
 
+
                     <h3>
                         Central Margin
                     </h3>
+
 
                     <p>
 
@@ -2163,9 +2826,11 @@
                         West
                     </div>
 
+
                     <h3>
                         Strong Region
                     </h3>
+
 
                     <p>
 
@@ -2222,8 +2887,6 @@
                     class="buttons contact-buttons">
 
 
-                    <!-- ضع بريدك الحقيقي هنا -->
-
                     <a
                         href="mailto:salahalrhabi2@gmail.com"
                         class="btn btn-primary">
@@ -2232,8 +2895,6 @@
 
                     </a>
 
-
-                    <!-- ضع رابط LinkedIn الحقيقي هنا -->
 
                     <a
                         href="https://www.linkedin.com/in/salah-alrhabi/"
@@ -2277,6 +2938,7 @@
                 © 2026 Salah Alrhabi
             </span>
 
+
             <span>
                 Data Analyst Portfolio
             </span>
@@ -2294,6 +2956,7 @@
         class="lightbox"
         id="lightbox"
         onclick="closeLightbox(event)">
+
 
         <button
             class="lightbox-close"
@@ -2377,6 +3040,7 @@
                     "lightbox"
                 );
 
+
             const image =
                 document.getElementById(
                     "lightbox-image"
@@ -2385,9 +3049,11 @@
 
             image.src = imagePath;
 
+
             lightbox.classList.add(
                 "active"
             );
+
 
             document.body.style.overflow =
                 "hidden";
