@@ -25,7 +25,7 @@
 
     <meta
         property="og:description"
-        content="Data Analyst portfolio featuring Power BI dashboards, SQL analysis, data visualization and business insights."
+        content="Data Analyst portfolio featuring Power BI dashboards, advanced SQL projects, healthcare analytics, data visualization, and business insights."
     >
 
     <meta
@@ -1223,6 +1223,101 @@
 
 
         /* =========================================================
+           HEALTHCARE SQL PROJECT / FUTURE-READY PROJECT CARDS
+        ========================================================= */
+
+        .project-kicker {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            margin-bottom: 14px;
+            flex-wrap: wrap;
+        }
+
+        .project-status {
+            padding: 6px 10px;
+            border-radius: 999px;
+            border: 1px solid rgba(94, 234, 212, 0.18);
+            background: rgba(94, 234, 212, 0.06);
+            color: var(--primary-light);
+            font-size: 0.72rem;
+            font-weight: 700;
+        }
+
+        .healthcare-cover {
+            min-height: 500px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: flex-end;
+            padding: 34px;
+            background:
+                linear-gradient(180deg, rgba(7,17,31,0.10), rgba(7,17,31,0.94)),
+                radial-gradient(circle at 25% 20%, rgba(94,234,212,0.20), transparent 35%),
+                radial-gradient(circle at 80% 30%, rgba(96,165,250,0.18), transparent 35%),
+                #081321;
+            border-right: 1px solid var(--border);
+        }
+
+        .healthcare-cover img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.92;
+        }
+
+        .healthcare-cover-copy {
+            position: relative;
+            z-index: 2;
+            max-width: 440px;
+        }
+
+        .healthcare-cover-copy span {
+            color: var(--primary);
+            font-size: 0.76rem;
+            font-weight: 800;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+        }
+
+        .healthcare-cover-copy h4 {
+            font-size: 2rem;
+            line-height: 1.08;
+            margin-top: 10px;
+        }
+
+        .project-note {
+            margin-top: 18px;
+            padding: 14px 16px;
+            border-left: 3px solid var(--primary);
+            border-radius: 0 12px 12px 0;
+            background: rgba(94,234,212,0.045);
+            color: var(--muted);
+            font-size: 0.82rem;
+        }
+
+        .future-project {
+            margin-top: 40px;
+            padding: 26px 30px;
+            border-radius: 22px;
+            border: 1px dashed rgba(255,255,255,0.13);
+            background: rgba(255,255,255,0.02);
+        }
+
+        .future-project strong {
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .future-project p {
+            color: var(--muted);
+            font-size: 0.88rem;
+        }
+
+        /* =========================================================
            LIGHTBOX
         ========================================================= */
 
@@ -1499,7 +1594,8 @@
             }
 
 
-            .sql-visual {
+            .sql-visual,
+            .healthcare-cover {
 
                 min-height: 430px;
 
@@ -1507,6 +1603,10 @@
 
                 border-bottom:
                     1px solid var(--border);
+            }
+
+            .healthcare-cover {
+                border-right: none;
             }
 
 
@@ -2387,7 +2487,102 @@
 
 
             <!-- =================================================
-                 PROJECT 2 - SQL
+                 PROJECT 2 - HEALTHCARE SQL
+                 Replace the cover image path below when your final
+                 Healthcare project cover is added to /Screenshots.
+            ================================================= -->
+
+            <div class="sql-project reveal">
+
+                <div class="healthcare-cover">
+                    <!-- READY FOR FINAL COVER IMAGE:
+                    <img
+                        src="Screenshots/Healthcare-Operations-Patient-Analytics-Cover.png"
+                        alt="Healthcare Operations and Patient Analytics SQL Project Cover">
+                    -->
+
+                    <div class="healthcare-cover-copy">
+                        <span>Featured SQL Project</span>
+                        <h4>Healthcare Operations &amp; Patient Analytics</h4>
+                    </div>
+                </div>
+
+                <div class="sql-project-content">
+
+                    <div class="project-kicker">
+                        <div class="section-label">SQL / Healthcare Analytics</div>
+                        <span class="project-status">End-to-End Analysis</span>
+                    </div>
+
+                    <h3>Healthcare Operations &amp; Patient Analytics</h3>
+
+                    <p>
+                        An end-to-end MySQL project analyzing patient activity,
+                        appointment performance, physician workload, hospital
+                        operations, readmissions, and financial performance across
+                        a global hospital network.
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag">MySQL</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">Data Cleaning</span>
+                        <span class="tag">CTEs</span>
+                        <span class="tag">Window Functions</span>
+                        <span class="tag">Healthcare Analytics</span>
+                    </div>
+
+                    <div class="sql-metrics">
+                        <div class="sql-metric">
+                            <strong>24K</strong>
+                            <span>Appointments</span>
+                        </div>
+                        <div class="sql-metric">
+                            <strong>76.5%</strong>
+                            <span>Completion Rate</span>
+                        </div>
+                        <div class="sql-metric">
+                            <strong>$51.37M</strong>
+                            <span>Admission Charges</span>
+                        </div>
+                    </div>
+
+                    <div class="sql-features">
+                        <span class="sql-feature">JOINs</span>
+                        <span class="sql-feature">CASE</span>
+                        <span class="sql-feature">CTEs</span>
+                        <span class="sql-feature">LAG()</span>
+                        <span class="sql-feature">RANK()</span>
+                        <span class="sql-feature">PARTITION BY</span>
+                        <span class="sql-feature">Rolling Average</span>
+                        <span class="sql-feature">MoM Analysis</span>
+                    </div>
+
+                    <div class="buttons">
+                        <!-- TODO: Replace # with the final Healthcare GitHub repository URL. -->
+                        <a href="#" class="btn btn-primary" aria-disabled="true">
+                            GitHub Link — Add When Ready
+                        </a>
+
+                        <!-- TODO: If you create a dedicated case-study page/PDF, replace # below. -->
+                        <a href="#" class="btn btn-outline" aria-disabled="true">
+                            Case Study — Add Later
+                        </a>
+                    </div>
+
+                    <div class="project-note">
+                        Ready for your final project cover, GitHub repository link,
+                        and optional case-study/documentation link. The layout does
+                        not need to be redesigned when those assets are available.
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PROJECT 3 - E-COMMERCE SQL
             ================================================= -->
 
             <div class="sql-project reveal">
@@ -2671,6 +2866,20 @@
 
             </div>
 
+            <!-- FUTURE PROJECT SLOT
+                 Keep this hidden/commented until a strong Python or end-to-end
+                 analytics project is ready. It is intentionally not displayed
+                 to visitors yet.
+
+            <div class="future-project reveal">
+                <strong>Future Project — Python / End-to-End Analytics</strong>
+                <p>
+                    Add a future project here when it is portfolio-ready. Recommended:
+                    Python (Pandas, NumPy, Matplotlib) or a full SQL + Python + Power BI case study.
+                </p>
+            </div>
+            -->
+
         </div>
 
     </section>
@@ -2698,7 +2907,7 @@
 
 
                 <p>
-                    Selected findings from the Superstore analysis.
+                    Selected findings across featured Power BI and SQL projects.
                 </p>
 
             </div>
